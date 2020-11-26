@@ -6,19 +6,23 @@ body {
   font-family: 'Roboto';
   background-color: rgb(251, 246, 237);
 }
+h1 {
+  color: #56425c;
+}
 button {
   letter-spacing: 0.1em;
   outline: inherit;
   background: none;
   border: none;
   color: #F3F6F4;
-  background-color: #18365e;
+  background-color: #405c6a;
   font-family: inherit;
   border: none;
   border-radius: 5px;
   box-shadow: 0px 0px 23px 0px rgb(158 158 158);
   padding: 10px;
   font-size: 1em;
+  cursor: pointer;
 }
 button:active {
   transition:.1s ease-in-out;
@@ -35,11 +39,17 @@ img {
   width: 7em;
   height: 7em;
 }
+#loginButton {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+
+  background-image: url(../img/login.png);
+}
 #inputContainer {
   padding:25px;
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
   width: 50%;
   align-items: center;
 }
@@ -57,7 +67,7 @@ img {
 }
 .navbar {
   padding: 1em;
-  background-color: #18365e;
+  background-color: #405c6a;
   min-height: 3.25rem;
 }
 .mainContainer {
@@ -93,7 +103,7 @@ img {
   align-items: center;
   letter-spacing: 0.1em;
   color: #F3F6F4;
-  background-color: #18365e;
+  background-color: #405c6a;
   font-family: inherit;
   border-radius: 5px;
   box-shadow: 0px 0px 23px 0px rgb(158 158 158);
