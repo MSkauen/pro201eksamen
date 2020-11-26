@@ -12,7 +12,7 @@ button {
     background: none;
     border: none;
     color: #F3F6F4;
-    background-color: #4b9387;
+    background-color: #18365e;
     font-family: inherit;
 }
 input, #loginButton{
@@ -23,6 +23,11 @@ input, #loginButton{
    padding:10px;
    width: 50%;
    font-size: 1em;
+}
+.logo {
+  height: 3em;
+  background-repeat: no-repeat;
+  background-image: url(https://bright-products.com/wp-content/themes/netron/libs/images/logos/logo-success.svg);
 }
 #inputContainer {
   padding:25px;
@@ -48,7 +53,9 @@ input, #loginButton{
 
 }
 .navbar {
-  
+  padding: 1em;
+  background-color: #18365e;
+  min-height: 3.25rem;
 }
 .mainContainer {
     grid-column: 1 / 1;
@@ -56,14 +63,14 @@ input, #loginButton{
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 .inputForm {
   padding: 25px;
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
+  row-gap: 20px;
   width: 100%;
   align-items: center;
 }
