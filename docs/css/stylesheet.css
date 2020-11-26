@@ -7,6 +7,7 @@ body {
   background-color: rgb(251, 246, 237);
 }
 h1 {
+  padding: 25px;
   color: #56425c;
 }
 button {
@@ -37,6 +38,7 @@ input, #loginButton{
   height: 3em;
 }
 img {
+  padding: 25px;
   width: 7em;
   height: 7em;
 }
@@ -88,6 +90,18 @@ img {
   justify-content: center;
   align-items: center;
 }
+.partsContainer {
+  padding: 25px;
+  grid-column: 1 / 1;
+  height: 80%;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  row-gap: 2em;
+  align-items: center;
+}
 .inputForm {
   padding: 25px;
   display: flex;
@@ -117,6 +131,37 @@ img {
   height: 3em;
   background-repeat: no-repeat;
   background-image: url(https://bright-products.com/wp-content/themes/netron/libs/images/logos/logo-success.svg);
+}
+.dot {
+  height: 10em;
+  width: 10em;
+  background-color: #405c6a;
+  border-radius: 50%;
+}
+.dot:hover {
+  background-color: #324954;
+  transition:.1s ease-in-out;
+}
+.dot:active {
+  background-color: #9fd18b;
+  transition:.1s ease-in-out;
+
+}
+.miniDot {
+  position: relative;
+  top: -1.5em;
+  right: -2.5em;
+  height: 3.5em;
+  width: 3.5em;
+  background-color: #56425c;
+  border-radius: 50%;
+}
+.count {
+  font-size: 1.5em;
+  line-height: 5vh;
+  vertical-align: middle;
+  font-weight: bold;
+  color: rgb(251, 246, 237);
 }
 @font-face {
   font-family: Roboto;
