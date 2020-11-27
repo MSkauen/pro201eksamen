@@ -286,6 +286,9 @@ img {
   mix-blend-mode: difference;
   cursor: pointer;
 }
+.serial {
+  text-align: center;
+}
 #barcode {
   width: 15em;
   height: 10em;
