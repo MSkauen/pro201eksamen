@@ -251,6 +251,7 @@ img {
   width: 10em;
   background-color: #405c6a;
   border-radius: 50%;
+  outline: none;
 }
 .dot:hover {
   background-color: #324954;
@@ -259,9 +260,13 @@ img {
 .dot:active {
   background-color: #9fd18b;
   transition:.1s ease-in-out;
-
+}
+.dot:focus {
+  background-color: #9fd18b;
+  transition:.1s ease-in-out;
 }
 .miniDot {
+  display: none;
   position: relative;
   top: -1.5em;
   right: -2.5em;
@@ -269,6 +274,13 @@ img {
   width: 3.5em;
   background-color: #56425c;
   border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url(../img/login.png);
+}
+.dot:focus .miniDot {
+  display: block;
 }
 .count {
   font-size: 2.5em;
