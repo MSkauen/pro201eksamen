@@ -302,6 +302,7 @@ ul.breadcrumb li a:hover {
   background-image: url(https://bright-products.com/wp-content/themes/netron/libs/images/logos/logo-success.svg);
 }
 .dot {
+  position: relative;
   min-height: 8em;
   min-width: 8em;
   background-color: #405c6a;
@@ -321,14 +322,15 @@ ul.breadcrumb li a:hover {
   transition:.1s ease-in-out;
 }
 .dot > img {
-    height: 100%;
-    width: 100%;
+  padding: 15px;
+  max-height: 100%;
+  max-width: 100%;
 }
 .miniDot {
   display: none;
   position: relative;
-  top: -1.5em;
-  right: -2.5em;
+  top: 0;
+  right: 0;
   height: 3.5em;
   width: 3.5em;
   background-color: #56425c;
@@ -339,6 +341,7 @@ ul.breadcrumb li a:hover {
   background-image: url(../img/login.png);
 }
 .dot:focus .miniDot {
+  position: absolute;
   display: block;
 }
 .count {
