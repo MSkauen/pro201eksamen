@@ -14,9 +14,9 @@
      </div>
      <div class="subNavbar">
       <ul class="breadcrumb">
-        <li><a href="/docs/">Login</a></li>
-        <li><a href="/docs/main.html">Home</a></li>
-        <li><a href="/docs/input.html">Serialnumber input</a></li>
+        <li><a href="https://mskauen.github.io/pro201eksamen/">Login</a></li>
+        <li><a href="https://mskauen.github.io/pro201eksamen/main.html">Home</a></li>
+        <li><a href="https://mskauen.github.io/pro201eksamen/input.html">Serialnumber input</a></li>
         <li>Logging</li>
       </ul>
      </div>
@@ -92,24 +92,34 @@
           </div>
         </div>
       </div>
-       <form action="tmi.html">
-         <button type="submit"  name="submitButton" id="loginButton"></button>
-       </form>
+      <form action="tmi.html" method="get">
+        <button type="submit" name="submitButton" id="loginButton"></button>
+      </form>
      </div>
    </div>
  </body>
 <script>
 <!-- SKRIV OM DETTE ETTER OMGJORING TIL REACT -->
-var checkboxes = [];
-  checkboxes = document.getElementsByClassName("dot");
+
+<!-- Henter alle checkboxes og submit knappen -->
+var checkboxes = document.getElementsByClassName("dot");
+var submitButton = document.querySelector("button");
+
+<!-- Itererer gjennom checkboxes array og legger til en EventListener på alle elementer-->
   for (checkbox of checkboxes) {
     checkbox.addEventListener("click", check);
   }
+  submitButton.addEventListener("click", storeSelections)
+
 
 function check(e) {
+  <!--Henter bilde som blir klikket på, finner parentNode og setter den som checkbox variabel-->
+  <!--Under finner vi checkmark elementet til dette spesifike elementet -->
   var checkbox = e.target.parentNode;
   var checkmark = checkbox.querySelector("div");
 
+  <!--Alle deler sin div har en data-value verdi som brukes som en boolean -->
+  <!--Med denne kan vi lage en enkel "on/off" funksjon -->
   if(checkbox.getAttribute("data-value") == 0) {
     checkbox.setAttribute("data-value", 1);
     checkmark.className = "miniDot";
@@ -117,6 +127,21 @@ function check(e) {
       checkbox.setAttribute("data-value", 0);
       checkmark.className = " ";
     }
+}
+<!--Funksjon som itererer gjennom alle deler og sjekker hvilke som skal lagres-->
+<!--ved hjelp av data-value verdi-->
+function storeSelections() {
+  var checkedCheckboxes = [];
+
+  for (checkbox of checkboxes) {
+    if(checkbox.getAttribute("data-value") == 1) {
+      checkbox.setAttribute("data-value", 0)
+      checkbox.querySelector("div").remove();
+      checkedCheckboxes.push(checkbox.outerHTML);
+    }
+  }
+  var jsonStringify = JSON.stringify(checkedCheckboxes);
+  localStorage.setItem("parts", jsonStringify);
 }
 </script>
 </html>
