@@ -123,7 +123,6 @@ img {
   padding: 1em;
   background-color: #405c6a;
   min-height: 3.25rem;
-  
 }
 .subNavbar {
   background: #9fd18b;
@@ -287,17 +286,19 @@ ul.breadcrumb li a:hover {
   background-color: #405c6a;
   border-radius: 50%;
   outline: none;
+  transition:.1s ease-in-out;
 }
 .dot:hover {
   background-color: #324954;
   transition:.1s ease-in-out;
 }
-.dot:active {
+.dotActive {
+  position: relative;
+  min-height: 8em;
+  min-width: 8em;
   background-color: #9fd18b;
-  transition:.1s ease-in-out;
-}
-.dot:focus {
-  background-color: #9fd18b;
+  border-radius: 50%;
+  outline: none;
   transition:.1s ease-in-out;
 }
 .dot > img {
@@ -306,22 +307,18 @@ ul.breadcrumb li a:hover {
   max-width: 100%;
 }
 .miniDot {
-  display: none;
-  position: relative;
+  display: block;
+  position: absolute;
   top: 0;
   right: 0;
   height: 3.5em;
   width: 3.5em;
-  background-color: #56425c;
+  background-color: #9fd18b;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   background-image: url(../img/login.png);
-}
-.dot:focus .miniDot {
-  position: absolute;
-  display: block;
 }
 .count {
   font-size: 2.5em;

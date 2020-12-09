@@ -2,6 +2,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/tmi.css">
     <meta charset="utf-8"/>
     <title>Smidig prosjekt</title>
   </head>
@@ -13,10 +14,10 @@
        </a>
      </div>
      <div class="subNavbar">
-      <ul class="breadcrumb">
-        <li><a href="/docs/">Login</a></li>
-        <li><a href="/docs//docs/main.html">Home</a></li>
-        <li><a href="/docs/input.html">Serialnumber input</a></li>
+      <ul class="breadcrumb"
+        <li><a href="https://mskauen.github.io/pro201eksamen/">Login</a></li>
+        <li><a href="https://mskauen.github.io/pro201eksamen/main.html">Home</a></li>
+        <li><a href="https://mskauen.github.io/pro201eksamen/input.html">Serialnumber input</a></li>
         <li>Summary</li>
       </ul>
      </div>
@@ -26,46 +27,29 @@
 
     <h1>Parts replaced:</h1>
     <div class="partsReplacedContainer">
-
-        <div tabindex="0" class="dot">
-            <img src="img/parts/new/battery.png" alt="">
-          </div>
-          <div tabindex="0" class="dot">
-            <img src="img/parts/new/solar_panel.png" alt="">
-          </div>
     </div>
     <h2 class="timerTag"></h2>
-    
+
    </div>
  </body>
 
  <script>
+    var replacedParts = JSON.parse(localStorage.getItem("parts"));
 
-    let eightSeconds = 8;
+    document.getElementsByClassName("partsReplacedContainer")[0].innerHTML = replacedParts;
+    localStorage.removeItem("parts");
 
+    let eightSeconds = 9;
     let x = setInterval(() => {
+        eightSeconds -= 1;
 
         document.querySelector('.timerTag').innerHTML = 'You are being redirected in ' + eightSeconds + 's';
 
-        eightSeconds -= 1;
-
         if(eightSeconds == 0) {
             clearInterval(x);
+            window.location = 'main.html';
         }
 
     }, 1000);
-
-    
-
-    
-
-
-
-
-     setTimeout( () => {
-        window.location = 'main.html';
-    }, 8000);
-
-
  </script>
 </html>
