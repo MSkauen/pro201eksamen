@@ -35,7 +35,7 @@
     content: '';
     height: 100px;
     position: absolute;
-    background: #FFFFFF;
+    background:  rgb(251, 246, 237);
     transform: rotate(-45deg);
 }
         
