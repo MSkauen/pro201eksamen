@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/tmi.css">
+    <link rel="stylesheet" href="css/confirmation.css">
     <meta charset="utf-8"/>
     <title>Smidig prosjekt</title>
   </head>
@@ -41,14 +42,23 @@
      </div>
    </header>
 
-   <div class="mainContainer">
+<div class="mainContainer">
 
     <h1>Parts replaced:</h1>
     <div class="partsReplacedContainer">
     </div>
+
+    <div class="success-checkmark">
+      <div class="check-icon">
+        <span class="icon-line line-tip"></span>
+        <span class="icon-line line-long"></span>
+        <div class="icon-circle"></div>
+        <div class="icon-fix"></div>
+      </div>
+    </div>
     <h2 class="timerTag"></h2>
 
-   </div>
+</div>
  </body>
 
  <script>
@@ -69,5 +79,13 @@
         }
 
     }, 1000);
+
+  (function showCheckMark() {
+    setTimeout( () => {
+      document.querySelector('.check-icon').show();
+    }, 10);
+  })();
+
+
  </script>
 </html>
