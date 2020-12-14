@@ -84,7 +84,7 @@
     height: 85px;
     position: absolute;
     transform: rotate(-45deg);
-    background-color: #FFFFFF;
+    background-color: rgb(251, 246, 237);
 }
 
 @keyframes rotate-circle {
