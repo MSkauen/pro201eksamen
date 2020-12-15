@@ -10,12 +10,12 @@
  <body>
    <header>
      <div class="navbar">
-       <a href="https://mskauen.github.io/pro201eksamen/">
+       <a href="/docs/">
          <div class="navItem">
            <img src="img/logo.png" alt="">
          </div>
        </a>
-       <a href="https://mskauen.github.io/pro201eksamen/">
+       <a href="/docs/">
          <div class="navItem">
            <img src="img/help.png" alt="">
          </div>
@@ -24,19 +24,19 @@
      <div class="subNavbar">
       <ul class="breadcrumb">
         <li>
-          <a href="https://mskauen.github.io/pro201eksamen/"><img src="img/logout.png" alt=""></a>
+          <a href="/docs/"><img src="img/logout.png" alt=""></a>
         </li>
         <li>
-          <a href="https://mskauen.github.io/pro201eksamen/main.html"><img src="img/home.png" alt=""></a>
+          <a href="/docs/"><img src="img/home.png" alt=""></a>
         </li>
         <li>
-          <a href="https://mskauen.github.io/pro201eksamen/input.html"><img src="img/barcode-white.png" alt=""></a>
+          <a href="/docs/input.html"><img src="img/barcode-white.png" alt=""></a>
         </li>
         <li>
-          <a href="https://mskauen.github.io/pro201eksamen/input.html"><img src="img/logImg.png" alt=""></a>
+          <a href="/docs/input.html"><img src="img/logImg.png" alt=""></a>
         </li>
         <li>
-          <a href="https://mskauen.github.io/pro201eksamen/main.html"><img src="img/login.png" alt=""></a>
+          <a href="/docs/"><img src="img/login.png" alt=""></a>
         </li>
       </ul>
      </div>
@@ -44,7 +44,7 @@
 
 <div class="mainContainer">
 
-    <h1>Parts replaced:</h1>
+    <h1>PARTS REPLACED</h1>
     <div class="partsReplacedContainer">
     </div>
 
@@ -57,14 +57,14 @@
       </div>
     </div>
 
-    <h1>HALLOOO</h1>
+    <h1>SUCCESS!</h1>
     <h2 class="timerTag"></h2>
 
 </div>
  </body>
 
  <script>
-    var replacedParts = JSON.parse(localStorage.getItem("parts"));
+    var replacedParts = (JSON.parse(localStorage.getItem("parts")) || []).join("");
 
     document.getElementsByClassName("partsReplacedContainer")[0].innerHTML = replacedParts;
     localStorage.removeItem("parts");
@@ -77,7 +77,7 @@
 
         if(eightSeconds == 0) {
             clearInterval(x);
-            window.location = 'main.html';
+            // window.location = 'main.html';
         }
 
     }, 1000);
