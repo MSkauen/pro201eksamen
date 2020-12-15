@@ -8,30 +8,31 @@
  <body>
    <header>
      <div class="navbar">
-       <a href="https://mskauen.github.io/pro201eksamen/">
+       <a href="/docs/">
          <div class="navItem">
            <img src="img/logo.png" alt="">
          </div>
        </a>
-       <a href="https://mskauen.github.io/pro201eksamen/">
+       <a href="/docs/">
          <div class="navItem">
-           <img src="img/help.png" alt="">
+           <img src="img/help.png" alt="Help">
+           <p class="help-image-description">Help</p>
          </div>
        </a>
      </div>
      <div class="subNavbar">
       <ul class="breadcrumb">
         <li>
-          <a href="https://mskauen.github.io/pro201eksamen/"><img src="img/logout.png" alt=""></a>
+          <a href="/docs/"><img src="img/logout.png" alt=""></a>
         </li>
         <li>
-          <a href="https://mskauen.github.io/pro201eksamen/main.html"><img src="img/home.png" alt=""></a>
+          <a href="/docs/"><img src="img/home.png" alt=""></a>
         </li>
         <li>
-          <a href="https://mskauen.github.io/pro201eksamen/input.html"><img src="img/barcode-white.png" alt=""></a>
+          <a href="/docs/input.html"><img src="img/barcode-white.png" alt=""></a>
         </li>
         <li>
-          <a href="https://mskauen.github.io/pro201eksamen/input.html"><img src="img/logImg.png" alt=""></a>
+          <a href="/docs/input.html"><img src="img/logImg.png" alt=""></a>
         </li>
       </ul>
      </div>
@@ -42,7 +43,7 @@
        <img src="img/parts.png" alt="">
        <div class="logDetails">
          <h2>765AJGL5965IO</h2>
-         <h2>Select replaced part:</h2>
+         <h2>SELECT PART USED FOR REPAIR</h2>
        </div>
       </div>
       <div class="partsContainer">
@@ -116,13 +117,14 @@
 <script>
 
   
-<!-- SKRIV OM DETTE ETTER OMGJORING TIL REACT -->
+// SKRIV OM DETTE ETTER OMGJORING TIL REACT //
 
-<!-- Henter alle checkboxes og submit knappen -->
+// Henter alle checkboxes og submit knappen //
 var checkboxes = document.getElementsByClassName("dot");
 var submitButton = document.querySelector("button");
 
-<!-- Itererer gjennom checkboxes array og legger til en EventListener på alle elementer-->
+// Itererer gjennom checkboxes array og legger til en EventListener på alle elementer //
+
   for (checkbox of checkboxes) {
     checkbox.addEventListener("click", check);
   }
@@ -130,13 +132,14 @@ var submitButton = document.querySelector("button");
 
 
 function check(e) {
-  <!--Henter bilde som blir klikket på, finner parentNode og setter den som checkbox variabel-->
-  <!--Under finner vi checkmark elementet til dette spesifike elementet -->
+  // Henter bilde som blir klikket på, finner parentNode og setter den som checkbox variabel //
+  // Under finner vi checkmark elementet til dette spesifike elementet //
   var checkbox = e.target.parentNode;
   var checkmark = checkbox.querySelector("div");
 
-  <!--Alle deler sin div har en data-value verdi som brukes som en boolean -->
-  <!--Med denne kan vi lage en enkel "on/off" funksjon -->
+  // Alle deler sin div har en data-value verdi som brukes som en boolean //
+  // Med denne kan vi lage en enkel "on/off" funksjon //
+
   if(checkbox.getAttribute("data-value") == 0) {
     checkbox.setAttribute("data-value", 1);
     checkmark.className = "miniDot";
@@ -145,8 +148,8 @@ function check(e) {
       checkmark.className = " ";
     }
 }
-<!--Funksjon som itererer gjennom alle deler og sjekker hvilke som skal lagres-->
-<!--ved hjelp av data-value verdi-->
+// Funksjon som itererer gjennom alle deler og sjekker hvilke som skal lagres //
+
 function storeSelections() {
   var checkedCheckboxes = [];
 
