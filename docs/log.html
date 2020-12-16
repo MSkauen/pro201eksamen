@@ -2,18 +2,27 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/modal.css">
     <meta charset="utf-8"/>
     <title>Smidig prosjekt</title>
   </head>
  <body>
    <header>
+
+     <div id="myModal" class="modal">
+       <div class="modal-content">
+         <span class="close">&times;</span>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar velit ut est luctus semper. Curabitur luctus bibendum risus vitae cursus. Suspendisse consectetur posuere volutpat. Curabitur pulvinar fermentum diam, at auctor metus facilisis ac. Aenean imperdiet sit amet libero ut cursus. Cras sed metus neque. Suspendisse urna nibh, mattis in mattis sagittis, accumsan in urna. Maecenas pretium velit nec tellus euismod, vel blandit magna hendrerit. Aenean vehicula odio eu imperdiet lacinia. Quisque sodales maximus nulla eget ultrices. Etiam volutpat placerat lacus quis sagittis. Duis interdum imperdiet ex non porta.</p>
+       </div>
+     </div>
+
      <div class="navbar">
-       <a href="main.html">
+       <a href="https://mskauen.github.io/pro201eksamen/main.html">
          <div class="navItem">
            <img src="img/logo.png" alt="">
          </div>
        </a>
-       <a href="main.html">
+       <a id="help">
          <div class="navItem">
            <img src="img/help.png" alt="Help">
            <p class="help-image-description">Help</p>
@@ -23,16 +32,16 @@
      <div class="subNavbar">
       <ul class="breadcrumb">
         <li>
-          <a href="index.html"><img src="img/logout.png" alt=""><p>Log out</p></a>
+          <a href="https://mskauen.github.io/pro201eksamen/"><img src="img/logout.png" alt=""><p>Log out</p></a>
         </li>
         <li>
-          <a href="main.html"><img src="img/home.png" alt=""><p>Home</p></a>
+          <a href="https://mskauen.github.io/pro201eksamen/main.html"><img src="img/home.png" alt=""><p>Home</p></a>
         </li>
         <li>
-          <a href="input.html"><img src="img/barcode-white.png" alt=""><p>Unit number</p></a>
+          <a href="https://mskauen.github.io/pro201eksamen/input.html"><img src="img/barcode-white.png" alt=""><p>Input</p></a>
         </li>
         <li>
-          <a href="course.html"><img src="img/courseImg.png" alt=""><p>Learn</p></a>
+          <a href="https://mskauen.github.io/pro201eksamen/log.html"><img src="img/logImg.png" alt=""><p>Log</p></a>
         </li>
       </ul>
      </div>
@@ -42,7 +51,7 @@
       <div class="logHeader">
        <img src="img/parts.png" alt="">
        <div class="logDetails">
-         <h2>765AJGL5965IO</h2>
+         <h2 id="serial">765AJGL5965IO</h2>
          <h2>SELECT PART USED FOR REPAIR</h2>
        </div>
       </div>
@@ -108,7 +117,7 @@
           </div>
         </div>
       </div>
-      <form action="tmi.html" method="get">
+      <form action="https://mskauen.github.io/pro201eksamen/tmi.html" method="get">
         <button type="submit" name="submitButton" id="loginButton"></button>
       </form>
      </div>
@@ -116,7 +125,7 @@
  </body>
 <script>
 
-  
+
 // SKRIV OM DETTE ETTER OMGJORING TIL REACT //
 
 // Henter alle checkboxes og submit knappen //
@@ -164,4 +173,5 @@ function storeSelections() {
   localStorage.setItem("parts", jsonStringify);
 }
 </script>
+<script src="js/help.js"> </script>
 </html>

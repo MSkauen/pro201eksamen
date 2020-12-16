@@ -2,18 +2,19 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/modal.css">
     <meta charset="utf-8"/>
     <title>Smidig prosjekt</title>
   </head>
  <body>
    <header>
      <div class="navbar">
-       <a href="index.html">
+       <a href="https://mskauen.github.io/pro201eksamen/">
          <div class="navItem">
            <img src="img/logo.png" alt="">
          </div>
        </a>
-       <a href="index.html">
+       <a id="help" >
          <div class="navItem">
            <img src="img/help.png" alt="Help">
            <p class="help-image-description">Help</p>
@@ -21,11 +22,19 @@
        </a>
      </div>
    </header>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar velit ut est luctus semper. Curabitur luctus bibendum risus vitae cursus. Suspendisse consectetur posuere volutpat. Curabitur pulvinar fermentum diam, at auctor metus facilisis ac. Aenean imperdiet sit amet libero ut cursus. Cras sed metus neque. Suspendisse urna nibh, mattis in mattis sagittis, accumsan in urna. Maecenas pretium velit nec tellus euismod, vel blandit magna hendrerit. Aenean vehicula odio eu imperdiet lacinia. Quisque sodales maximus nulla eget ultrices. Etiam volutpat placerat lacus quis sagittis. Duis interdum imperdiet ex non porta.</p>
+      </div>
+    </div>
+
    <div class="mainContainer">
      <div id="inputContainer" align="center">
        <img class="user" src="img/user.png" alt="">
        <h1>Login</h1>
-       <form class="inputForm" action="main.html">
+       <form class="inputForm" action="https://mskauen.github.io/pro201eksamen/main.html">
          <input id="username" type="text" placeholder="Username" maxlength="12" required>
          <input id="password" type="password" placeholder="Password">
          <button type="submit"  name="loginButton" id="loginButton" class=""></button>
@@ -33,4 +42,5 @@
      </div>
   </div>
  </body>
+ <script src="js/help.js"> </script>
 </html>
