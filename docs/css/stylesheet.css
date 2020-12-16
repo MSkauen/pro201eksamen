@@ -85,7 +85,7 @@ img {
   background-image: url(../img/login.png);
 }
 #inputContainer {
-  padding: 25px;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -110,7 +110,6 @@ img {
 
 #logContainer, h2 {
   color: #324954;
-  text-decoration: underline;
 }
 #buttonContainer {
   padding:25px;
@@ -169,7 +168,7 @@ ul.breadcrumb li a {
   align-items: center;
   color: #000000;
   text-decoration: none;
-  
+
 }
 ul.breadcrumb li a:hover {
   box-shadow: 3px 0px 6px 0px #405c6a;
@@ -197,7 +196,7 @@ ul.breadcrumb:hover li a p {
 }
 .mainContainer {
   grid-column: 1 / 1;
-  height: 80%;
+  height: calc(100vh - 174px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -230,7 +229,7 @@ ul.breadcrumb:hover li a p {
   width: 60%;
 }
 
-.partsContainer, h1 {
+#serial {
   color: #324954;
   text-decoration: underline;
 }
@@ -241,7 +240,7 @@ ul.breadcrumb:hover li a p {
 }
 
 .courseContainer {
-  height: 85%;
+  height: calc(100vh - 174px);
   column-gap: 3em;
   display: flex;
   flex-direction: row;
@@ -250,11 +249,11 @@ ul.breadcrumb:hover li a p {
   overflow-y: hidden;
 }
 .course {
-  height: 50vh;
+  height: 100%;
   width: 100%;
 }
 .courseDetails {
-  padding: 0 15px 0 15px;
+  padding: 25px 15px 25px 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -275,7 +274,7 @@ ul.breadcrumb:hover li a p {
 .allVideosContainer {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 80%;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -285,7 +284,7 @@ ul.breadcrumb:hover li a p {
   row-gap: 0.5em;
 }
 .sideBar {
-  overflow-y: scroll;
+  overflow-y: hidden;
   flex: 1 2 auto;
   height: 100%;
   width: 100%;
@@ -312,7 +311,6 @@ ul.breadcrumb:hover li a p {
 }
 .inputForm {
   padding: 25px;
-  padding-top: 70px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
